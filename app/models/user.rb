@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_secure_password
+
   has_many :matches
   has_many :inverse_matches, foreign_key: :matchee_id, class_name: Match
   has_one :info

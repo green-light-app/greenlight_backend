@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :create]
   get "/auto_login", to: "auth#auto_login"
   post "/login", to: "auth#create"
+  # root controller: :rooms, action: :index
+  resources :room_messages
+  resources :rooms
 
 end
